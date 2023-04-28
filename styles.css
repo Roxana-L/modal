@@ -1,0 +1,199 @@
+/* I have imported the font used by the High Street TV website */
+
+@import url('https://fonts.cdnfonts.com/css/gotham');
+
+/* I have used colors already present on the page for consistency */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Gotham', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.notify-button {
+    background-color: #414141;
+    color: #fff;
+    border: none;
+    border-radius: 0.15rem;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 200ms all ease-in-out;
+    margin: 0 auto;
+    padding: 0.65rem 2rem;
+    white-space: nowrap;
+}
+
+.notify-button:hover {
+    background-color: #72b83e;
+    color: #414141;
+    cursor: pointer;
+}
+
+.notify-button:active {
+    color: #fff;
+    background-color: #3e6620;
+    cursor: pointer;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.15);
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-content {
+    background-color: #fff;
+    border-radius: 0.15rem;
+    max-width: 30rem;
+    min-height: 13rem;
+    max-height: 20rem;
+    padding: 1rem 1.5rem;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input-submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0 0.5rem;
+}
+
+#email {
+    padding: 0.5rem;
+    width: 90%;
+    border: 1px solid #414141;
+    border-radius: 0.15rem;
+}
+
+.submit-button {
+    white-space: nowrap;
+    background-color: #B6BD00;
+    color: #fff;
+    border: none;
+    border-radius: 0.15rem;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 200ms all ease-in-out;
+    padding: 0.5rem 1rem
+}
+
+.submit-button:hover {
+    background-color: #8a8e00;
+    color: #f6f7e9;
+    cursor: pointer;
+}
+
+.submit-button:active {
+    color: #fff;
+    background-color: #8a8e00;
+    cursor: pointer;
+}
+
+p {
+    color: #414141;
+}
+
+#info {
+    font-weight: bold;
+    padding-top: 1rem;
+}
+
+#email-error {
+    color: red;
+    font-size: 0.85rem;
+}
+
+#additional-info {
+    font-size: 0.825rem;
+    text-align: justify;
+}
+
+#submit-success {
+    justify-content: center;
+    font-weight: bold;
+    padding-top: 1rem;
+    text-align: center;
+    color: #72b83e;
+}
+
+.close {
+    color: #414141;
+    float: right;
+    font-size: 1.5rem;
+    align-self: end;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #info {
+        font-weight: bold;
+        padding-top: 0.85rem;
+        text-align: center;
+    }
+
+    .input-submit {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #modal-content {
+        padding: 0.75rem 1.25rem;
+        width: 85%;
+    }
+
+    #email {
+        padding: 0.35rem;
+        width: 96%;
+        border-radius: 0.25rem;
+    }
+
+    .submit-button {
+        border-radius: 1.4rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    #additional-info {
+        font-size: 0.8rem;
+        margin: 0.5rem 0;
+        width: 96%;
+    }
+
+    .success-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #email-error {
+        margin: 0.5rem 0 0;
+        text-align: center;
+    }
+}

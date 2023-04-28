@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <!-- Created a button that triggers an Out of Stock popup modal -->
+    <button type="submit" id="notify-button" class="notify-button" style="display: block;">Notify me</button>
+    <!-- Modal Wrapper -->
+    <div id="modal" class="modal" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <!-- Modal Content -->
+        <div id="modal-content">
+
+            <div class="close">&times;</div>
+            <p id="info">Email me when back in stock</p>
+            <form>
+                <div id="input-submit" class="input-submit">
+                    <input type="text" id="email" name="email" placeholder="Enter your email" required
+                        autocomplete="off">
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+                <p id="email-error"></p>
+            </form>
+            <div class="success-message">
+                <p id="submit-success" style="display: none;">Thank you for your submission!</p>
+                <p id="additional-info">In case the item is not restocked, we will inform you and suggest some
+                    similar
+                    products.</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
